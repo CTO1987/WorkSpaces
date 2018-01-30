@@ -1,0 +1,63 @@
+5,repositories 使用阿里云的国内镜像仓库地址，就可以快速的下载需要的文件，这样就不用VPN了 maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+    <!--checkbox第一个-->
+	....
+    <!--第二个柜子-->
+	...
+    <!--checkbox第二个-->
+	...
+    <!--第二个柜子-->
+	...
+	代码看driver app view_xianhuaofenhao.xml
+5,像素大师 720*1280 psd文件标准
+6，做ui时，一部手机放720*1280原型对，另一部开发原型
+Editor -> Live Templates
+Define = java -> declaration.
+newmethod
+/**
+* 描    述：更新位置
+* 作    者：韦理英
+* 时    间：
+*/
+
+public void $args$(@NonNull $name$ $value$) {
+    // 注解
+    // 注解
+    // 注解
+    // 注解
+}
+newnote
+        // 注解
+        // 注解
+        // 注解
+        // 注解
+
+newheader
+/**
+* 描    述：更新位置
+* 作    者：韦理英
+* 时    间：
+*/
+newvar 
+// 注解: $cursor$
+protected $args$ $name$ = $value$;
+
+Editor -> File and Code Templates - > includes - File Header
+/**
+ * 描    述：XXXXX
+ * 作    者：韦理英
+ * 时    间：${DATE}.
+ */
+ 
+ LayoutCreator
+ GsonFormat
+ Android ButterKnife Zelezny
+ JsonOnlineViewer	URL访问JSON
+ PermissionsDispatcher plugin 自动生成6.0权限的代码
+ WakaTime 记录你在IDE上的工作时间
+ eventbus-intellij-plugin eventbug导航插件
+ android-butterknife-zelezny butterknife自动生成
+ charles(charleshanhua.zip已下) 开发必带，监听API，是否有多次访问，API测试等
+ RemoveButterKnife 转findviewbyid
+ Lifecycle Sorter 生命周期对其生命周期方法位置进行先后排序
+ ECTranslation 翻译插件,可以将英文翻译为中文。
+ innerBuilder 快速Builder
