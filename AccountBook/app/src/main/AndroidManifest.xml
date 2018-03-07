@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.github.airsaid.accountbook">
+
+    <!-- 基础模块（必须加入以下声明）START -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 基础模块 END -->
+
+    <!--读取外部存储-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!--相机拍照-->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <!--读取日志-->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <application
+        android:name=".base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="LEANCLOUD_APPID"
+            android:value="${leancloud_appid}"/>
+        <meta-data
+            android:name="LEANCLOUD_APPKEY"
+            android:value="${leancloud_appkey}"/>
+        <meta-data
+            android:name="BUGLY_APPID"
+            android:value="${bugly_appid}" />
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@android:style/Theme.Translucent" />
+        <!--用户反馈组件-->
+        <activity android:name="com.avos.avoscloud.feedback.ThreadActivity"/>
+        <!--主页-->
+        <activity android:name=".mvp.main.MainActivity"/>
+        <!--登录-->
+        <activity
+            android:name=".mvp.login.LoginActivity"
+            android:theme="@style/AppTheme.GrayControl"/>
+        <!--注册-->
+        <activity
+            android:name=".mvp.register.RegisterActivity"
+            android:theme="@style/AppTheme.GrayControl"/>
+        <!--记账-->
+        <activity android:name=".mvp.account.AccountActivity"/>
+        <!--个人资料-->
+        <activity android:name=".mvp.user.UserInfoActivity"/>
+        <!--帐薄-->
+        <activity android:name=".mvp.books.AccountBooksActivity"/>
+        <!--找回密码-->
+        <activity
+            android:name=".ui.activity.ForgetPasswordActivity"
+            android:theme="@style/AppTheme.GrayControl"/>
+        <!--设置-->
+        <activity android:name=".ui.activity.SettingActivity"/>
+        <!--关于我们-->
+        <activity android:name=".ui.activity.AboutPageActivity"/>
+        <!--邀请好友-->
+        <activity android:name=".ui.activity.AddShareUserActivity"/>
+        <!--添加帐薄-->
+        <activity android:name=".ui.activity.AddEditBookActivity"/>
+        <!--消息-->
+        <activity android:name=".ui.activity.MsgActivity"/>
+        <!--编辑分类-->
+        <activity android:name=".ui.activity.TypeEditActivity"/>
+        <!--添加/编辑分类-->
+        <activity android:name=".ui.activity.AddEditTypeActivity"/>
+        <!--统计-->
+        <activity android:name=".mvp.count.CountActivity"/>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+        <provider
+            android:name=".util.MyFileProvider"
+            android:authorities="${applicationId}.provider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>
