@@ -14,9 +14,7 @@ Editor -> Live Templates
 Define = java -> declaration.
 newmethod
 /**
-* 描    述：更新位置
-* 作    者：韦理英
-* 时    间：
+* 更新位置
 */
 
 public void $args$(@NonNull $name$ $value$) {
@@ -42,11 +40,15 @@ newvar
 protected $args$ $name$ = $value$;
 
 Editor -> File and Code Templates - > includes - File Header
-/**
- * 描    述：XXXXX
- * 作    者：韦理英
- * 时    间：${DATE}.
+ /**
+ * =====================================
+ * 作    者: 韦理英
+ * 版    本：1
+ * 创建日期：${YEAR}/${MONTH}/${DAY}
+ * 描    述：
+ * =====================================
  */
+
  
  LayoutCreator
  GsonFormat
